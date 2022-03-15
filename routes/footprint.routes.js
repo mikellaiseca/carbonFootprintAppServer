@@ -53,6 +53,7 @@ router.post('/car-form', isAuthenticated, (req, res) => {
 router.get("/car-custom-footprints/:userId", (req, res) => {
 
     const { userId } = req.params
+    console.log(userId)
 
     FootprintCar
         .find({ user: userId })
