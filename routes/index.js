@@ -10,4 +10,7 @@ module.exports = app => {
 
     app.use('/api', require('./footprint.routes'))
 
+    app.use('/api', require('./contact.routes'))
+
+
 }
