@@ -12,5 +12,6 @@ module.exports = app => {
 
     app.use('/api', require('./contact.routes'))
 
+    app.use('/api', require('./news.routes'))
 
 }
