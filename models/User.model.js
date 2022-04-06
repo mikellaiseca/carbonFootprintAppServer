@@ -35,6 +35,10 @@ const userSchema = new Schema(
       type: Schema.Types.ObjectId, ref: 'FootprintPlane'
     }],
 
+    savedFootprintShipping: [{
+      type: Schema.Types.ObjectId, ref: 'FootprintShipping'
+    }],
+
     comments: [{ type: Schema.Types.ObjectId, ref: 'Comment' }]
 
   },

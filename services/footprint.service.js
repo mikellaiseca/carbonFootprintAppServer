@@ -32,10 +32,22 @@ class FootprintService {
             "vehicle_model_id": vehicle_model_id
         }
 
-
         return this.app.post('/estimates', data, { headers: { Authorization: `Bearer ${process.env.CARBONTOKEN}` } })
     }
 
+    getShippingFootprint(weight_unit, weight_value, distance_value, transport_method) {
+
+        const data = {
+            "type": 'shipping',
+            "weight_unit": weight_unit,
+            "weight_value": weight_value,
+            "distance_unit": "km",
+            "distance_value": distance_value,
+            "transport_method": transport_method,
+        }
+
+        return this.app.post('/estimates', data, { headers: { Authorization: `Bearer ${process.env.CARBONTOKEN}` } })
+    }
 
 }
 
