@@ -7,7 +7,7 @@ router.post('/create-comment', (req, res, next) => {
 
     Comment
         .create({ author, profile, content, date })
-        .then(response => res.status(200).json(response)) //esstado correcto
+        .then(response => res.status(200).json(response))
         .catch(err => res.status(500).json(err))
 
 })
